@@ -119,15 +119,16 @@ const Header: React.FC = () => {
                   ))}
 
                   {/*  Button */}
-                  <button
-                    className={`ml-4 rounded-full px-5 py-2 text-sm font-semibold transition-all duration-500 ease-out ${
+                  <Link
+                    to="/enroll"
+                    className={`ml-4 rounded-lg px-6 py-2.5 text-sm font-montserrat font-bold transition-all duration-500 ease-out transform hover:scale-105 active:scale-95 inline-block ${
                       isLoaded
                         ? "translate-y-0 opacity-100"
                         : "translate-y-4 opacity-0"
                     } ${
                       isScrolled
-                        ? "bg-white text-indigo-600 shadow-lg hover:bg-gray-100"
-                        : "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 dark:bg-indigo-600 dark:hover:bg-indigo-500"
+                        ? "bg-white text-indigo-900 shadow-none hover:bg-gray-50"
+                        : "bg-indigo-900 text-white shadow-md shadow-indigo-900/20 hover:bg-indigo-800"
                     }`}
                     style={{
                       transitionDelay: isLoaded
@@ -135,8 +136,8 @@ const Header: React.FC = () => {
                         : "0ms",
                     }}
                   >
-                    Get Started
-                  </button>
+                    Enroll Now
+                  </Link>
 
                   {/* Dark/Light Mode Toggle */}
                   <ModeToggle

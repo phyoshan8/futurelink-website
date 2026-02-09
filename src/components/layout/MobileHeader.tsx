@@ -180,15 +180,17 @@ const MobileHeader: React.FC = () => {
                  );
               })}
 
-              <button
-                className={`mt-10 rounded-full px-8 py-3 text-base font-semibold shadow-lg shadow-indigo-500/20 transition-all duration-300 transform hover:scale-105 active:scale-95 w-full max-w-[200px] flex items-center justify-center ${
+              <Link
+                to="/enroll"
+                onClick={() => setIsOpen(false)}
+                className={`mt-10 rounded-lg px-8 py-3 text-base font-montserrat font-bold transition-all duration-300 transform hover:scale-105 active:scale-95 w-full max-w-[200px] flex items-center justify-center ${
                   isScrolled
-                    ? "bg-white text-indigo-600 hover:bg-gray-50"
-                    : "bg-linear-to-r from-blue-600 to-indigo-600 text-white hover:shadow-indigo-500/40"
+                    ? "bg-white text-indigo-900 shadow-none hover:bg-gray-50"
+                    : "bg-indigo-900 text-white shadow-md shadow-indigo-900/20 hover:bg-indigo-800"
                 }`}
               >
-                Get Started
-              </button>
+                Enroll Now
+              </Link>
             </div>
           </div>
         </div>
