@@ -5,6 +5,29 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
+    children: [
+      {
+        path: "courses",
+        lazy: async () => {
+          const { default: Courses } = await import("./pages/Courses");
+          return { Component: Courses };
+        },
+      },
+      {
+        path: "about",
+        lazy: async () => {
+          const { default: About } = await import("./pages/About");
+          return { Component: About };
+        },
+      },
+      {
+        path: "contact",
+        lazy: async () => {
+          const { default: Contact } = await import("./pages/Contact");
+          return { Component: Contact };
+        },
+      },
+    ],
   },
 ]);
 

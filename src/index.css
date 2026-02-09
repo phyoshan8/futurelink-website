@@ -2,6 +2,34 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: 'Canela Deck Web';
+  src: local('Canela Deck Web'), local('Canela-Deck-Web'), url('/fonts/Canela-Deck-Web.woff2') format('woff2');
+  font-display: swap;
+}
+
+@utility font-canela {
+  font-family: 'Canela Deck Web', serif;
+}
+
+@utility font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+@utility font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+@keyframes fade-in-word {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-word {
+  opacity: 0;
+  animation: fade-in-word 0.5s ease-out forwards;
+}
+
 @layer base {
   body {
     @apply bg-white text-gray-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300;
