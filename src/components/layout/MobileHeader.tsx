@@ -74,7 +74,8 @@ const MobileHeader: React.FC = () => {
             }`}
           >
             {/* Logo */}
-            <div
+            <Link
+              to="/"
               className={`flex items-center transition-all duration-500 ease-out ${
                 isLoaded
                   ? "translate-y-0 opacity-100"
@@ -106,7 +107,7 @@ const MobileHeader: React.FC = () => {
                   Education
                 </span>
               </div>
-            </div>
+            </Link>
 
             {/* Mobile Actions */}
             <div className="flex items-center space-x-4">

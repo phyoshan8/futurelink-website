@@ -58,7 +58,8 @@ const Header: React.FC = () => {
               }`}
             >
               {/* Logo Section - single element that transforms */}
-              <div
+              <Link
+                to="/"
                 className={`flex items-center transition-all duration-500 ease-out ${
                   isLoaded
                     ? "translate-y-0 opacity-100"
@@ -90,7 +91,7 @@ const Header: React.FC = () => {
                     Education
                   </span>
                 </div>
-              </div>
+              </Link>
 
               {/* Navigation Links - single elements that transform */}
               <div className="block">
